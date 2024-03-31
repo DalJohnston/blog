@@ -3,7 +3,7 @@ layout: post
 title:  "Smash Ultimate Web Scraping"
 author: Dallin Johnston
 description: Using basic web scraping to find out which Super Smash Bros. Ultimate fighters are the best.   
-image: "/assets/smashimages/banner.webp"
+image: "/assets/smashimages/Smash.png"
 ---
 
 
@@ -29,23 +29,30 @@ Being both a burgeoning data scientist and an avid player of this game, I decide
 
 ## Data Collection
 
-To accomplish my goals, I used publicly available character data found at this [website](https://www.unitstatistics.com/ssbu/).  Every single in-game aspect that is shared among all characters was included in this data, from tier and relative weight to airborne acceleration values, and I used python packages such as beautifulsoup, pandas, and seaborn to read in and analyze the data.  A more comprehensive list of the packages that I used can be seen below.
+To accomplish my goals, I used publicly available character data found at this [website](https://www.unitstatistics.com/ssbu/).  Every single in-game aspect that is shared among all characters was included in this data, from tier and relative weight to airborne acceleration values, and I used python packages such as beautifulsoup, pandas, and seaborn to read in and analyze the data.  Some code snippets along with a more comprehensive list of the packages that I used can be seen below.
+
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/packages.png)
 
+
 With BeautifulSoup, scraping this data was a fairly straightforward process. All it required was creating a simple html match function to identify the rows in the dataset, which were listed in the html as “tr,” and then looping through those rows to scrape the data into a group of lists that represent our columns.
+
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/bsoup.png)
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/rowfxn.png)
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/htmlc.png)
 
+
 Once that was done, I just had to convert the newly populated data lists from a dictionary to a pandas dataframe for ease of use.
 
+
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/dtodf.png)
+
 
 One lesson I learned during this conversion process is that it’s very important to make sure that all of your number data are actually formatted as number values before you begin analysis. 
 
 It’s also important to consider how to handle any missing values.  Fortunately, this data included very few missing values, and since most of these values were publicly available elsewhere, I entered most of them by hand. 
+
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/numna.png)
 
