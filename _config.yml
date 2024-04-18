@@ -20,10 +20,10 @@
 
 title: The Data Science Stowaway 
 email: dalsafadao02@gmail.com 
-description: "This is my blog for my data science class" 
+description: "Basic Data Science from an Advertising Student" 
 baseurl: "/blog" # the name of the repository 
 url: "https://DalJohnston.github.io" #  change this to "https://<your-github-username>.github.io"
-image: /assets/images/headerimg.jpg
+image: /assets/images/redpurple.avif
 author: Dallin Johnston
 copyright: DBJ # Your initials or name or what you want the copyright to be.  Leave empty for no copyright
 footer_description: 
