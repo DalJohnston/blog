@@ -3,7 +3,7 @@ layout: post
 title:  "Smash Ultimate Web Scraping"
 author: Dallin Johnston
 description: Using basic web scraping to find out which Super Smash Bros. Ultimate fighters are the best.   
-image: "/assets/images/Smash.png"
+image: "/assets/images/ssbu1.webp"
 ---
 
 
